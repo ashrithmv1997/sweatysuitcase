@@ -13,25 +13,16 @@ function scrollToSection() {
 }
 document.addEventListener("DOMContentLoaded", () => {
 
-  const btn =
-    document.getElementById("remaniWidgetButton");
-
-  const widget =
-    document.getElementById("remaniWidget");
+  const btn = document.getElementById("remaniWidgetButton");
+  const widget = document.getElementById("remaniWidget");
 
   if (!btn || !widget) {
-    console.error("Remani widget elements not found");
+    console.error("Remani widget not found");
     return;
   }
 
   btn.addEventListener("click", () => {
-
-    if (widget.style.display === "block") {
-      widget.style.display = "none";
-    } else {
-      widget.style.display = "block";
-    }
-
+    widget.classList.toggle("open");
   });
 
 });
