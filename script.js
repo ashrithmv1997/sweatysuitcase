@@ -1,7 +1,13 @@
-function scrollToSection(){
+function scrollToSection() {
+  const section = document.getElementById('places');
 
-    document.getElementById('places').scrollIntoView({
-        behavior:'smooth'
-    });
+  if (!section) {
+    console.warn("Section #places not found");
+    return;
+  }
 
+  section.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
 }
